@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziad Omar — Full-Stack Developer & Creative Engineer</title>
-  <meta name="description" content="Portfolio of Ziad Omar - Creative Full-Stack Engineer specializing in Angular, React, Node.js, and Modern Editorial Web Design." />
+  <title>Ziad Omar — Full-Stack Engineer & Software Architect</title>
+  <meta name="description" content="Portfolio of Ziad Omar - Full-Stack Developer specializing in Angular, React, Node.js, and Modern Minimal Web Engineering." />
 
-  <!-- Google Fonts: Syne, Plus Jakarta Sans, JetBrains Mono -->
+  <!-- Google Fonts: Inter & JetBrains Mono (Exact Swiss / Helvetica Minimal Style) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
@@ -26,14 +26,14 @@
   <!-- Admin Modal for CMS & Live Editing -->
   <div class="admin-modal-overlay" id="adminModal">
     <div class="admin-modal-box">
-      <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 8px; text-transform: uppercase;">👑 Admin CMS Authentication</h3>
-      <p style="color: var(--c-text-muted); font-size: 0.9rem; margin-bottom: 20px;">Enter your admin passcode to enable live visual editing & MongoDB control:</p>
-      <input type="password" id="adminPassInput" class="form-input-editorial" placeholder="Enter password (default: admin)" style="margin-bottom: 20px;" />
-      <div style="display: flex; gap: 12px; justify-content: flex-end;">
+      <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; text-transform: uppercase;">👑 Admin CMS Authentication</h3>
+      <p style="color: var(--c-text-muted); font-size: 0.88rem; margin-bottom: 18px;">Enter your admin passcode to enable live visual editing & MongoDB control:</p>
+      <input type="password" id="adminPassInput" class="form-input-editorial" placeholder="Enter password (default: admin)" style="margin-bottom: 18px;" />
+      <div style="display: flex; gap: 10px; justify-content: flex-end;">
         <button class="btn-editorial" onclick="closeAdminModal()">
           <span class="btn-text-wrap"><span class="text-main">Cancel</span><span class="text-hover">Cancel</span></span>
         </button>
-        <button class="btn-editorial" onclick="verifyAdminPass()" style="background: var(--c-soft-concrete); color: #08080a;">
+        <button class="btn-editorial" onclick="verifyAdminPass()" style="background: var(--c-soft-concrete); color: #0b0b0b;">
           <span class="btn-text-wrap"><span class="text-main">Unlock CMS 🔓</span><span class="text-hover">Unlock CMS 🔓</span></span>
         </button>
       </div>
@@ -42,14 +42,14 @@
 
   <!-- Messages Inbox Modal for MongoDB Submissions -->
   <div class="admin-modal-overlay" id="inboxModal">
-    <div class="admin-modal-box" style="max-width: 680px;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--c-obsidian-border); padding-bottom: 12px;">
-        <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin: 0; text-transform: uppercase;">📬 Received Messages (MongoDB)</h3>
-        <button class="btn-editorial" style="padding: 6px 16px; font-size: 0.75rem;" onclick="closeInboxModal()">
+    <div class="admin-modal-box" style="max-width: 650px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; border-bottom: 1px solid var(--c-obsidian-border); padding-bottom: 12px;">
+        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 0; text-transform: uppercase;">📬 Received Messages (MongoDB)</h3>
+        <button class="btn-editorial" style="padding: 5px 14px; font-size: 0.72rem;" onclick="closeInboxModal()">
           <span class="btn-text-wrap"><span class="text-main">✕ Close</span><span class="text-hover">✕ Close</span></span>
         </button>
       </div>
-      <div id="inboxListContent" style="max-height: 380px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px;">
+      <div id="inboxListContent" style="max-height: 360px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;">
         <p style="color: var(--c-text-muted); text-align: center;">Fetching submissions from MongoDB...</p>
       </div>
     </div>
@@ -69,14 +69,14 @@
       <nav>
         <ul class="nav-menu">
           <li><a href="#hero" class="nav-item-link">Index</a></li>
-          <li><a href="#works" class="nav-item-link">Selected Works</a></li>
+          <li><a href="#works" class="nav-item-link">Works</a></li>
           <li><a href="#services" class="nav-item-link">Capabilities</a></li>
           <li><a href="#about" class="nav-item-link">Profile</a></li>
           <li><a href="#contact" class="nav-item-link">Contact</a></li>
         </ul>
       </nav>
 
-      <div style="display: flex; align-items: center; gap: 14px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
         <button class="admin-badge-btn" onclick="openAdminModal()">
           <span>👑 Admin CMS</span>
         </button>
@@ -91,43 +91,51 @@
   </header>
 
   <!-- ==========================================================================
-       SECTION 01: HERO
+       SECTION 01: HERO (FEATURING ZIAD'S REAL PHOTO)
        ========================================================================== -->
   <section class="hero-section" id="hero">
     <div class="container">
-      <div class="hero-header">
-        <div class="hero-subtitle-row">
-          <span class="hero-role-badge">01 // FULL-STACK ARCHITECT & CREATIVE ENGINEER</span>
-          <span class="hero-location-badge">BASED IN CAIRO, EGYPT — AVAILABLE GLOBALLY</span>
+      
+      <div class="hero-layout-grid">
+        <div>
+          <span class="hero-role-badge">01 // FULL-STACK SOFTWARE ARCHITECT</span>
+          <h1 class="hero-headline">
+            BUILDING <strong>TIMELESS</strong><br />
+            <span class="thin-muted">DIGITAL SYSTEMS &</span><br />
+            WEB EXPERIENCES.
+          </h1>
+          <p class="hero-desc-clean">
+            I am <strong>Ziad Omar</strong>, a full-stack engineer building high-precision web architectures, scalable Node.js & Express backends, and modern reactive interfaces.
+          </p>
+
+          <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+            <a href="#works" class="btn-editorial">
+              <span class="btn-text-wrap">
+                <span class="text-main">Explore Works ↓</span>
+                <span class="text-hover">Explore Works ↓</span>
+              </span>
+            </a>
+            <a href="https://github.com/zezobnomar55-sudo" target="_blank" rel="noreferrer" class="btn-editorial" style="background: transparent;">
+              <span class="btn-text-wrap">
+                <span class="text-main">GitHub Profile ↗</span>
+                <span class="text-hover">GitHub Profile ↗</span>
+              </span>
+            </a>
+          </div>
         </div>
 
-        <h1 class="hero-headline">
-          BUILDING <span class="thin-text">TIMELESS</span><br />
-          DIGITAL SYSTEMS &<br />
-          WEB EXPERIENCES.
-        </h1>
-      </div>
-
-      <div class="hero-bottom-grid">
-        <p class="hero-bio">
-          I am <strong>Ziad Omar</strong>, a full-stack software engineer crafting robust backend pipelines, scalable RESTful architectures, and high-precision frontend interfaces with modern frameworks.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#works" class="btn-editorial">
-            <span class="btn-text-wrap">
-              <span class="text-main">Explore Works ↓</span>
-              <span class="text-hover">Explore Works ↓</span>
-            </span>
-          </a>
-          <a href="https://github.com/zezobnomar55-sudo" target="_blank" rel="noreferrer" class="btn-editorial" style="background: transparent;">
-            <span class="btn-text-wrap">
-              <span class="text-main">GitHub Profile ↗</span>
-              <span class="text-hover">GitHub Profile ↗</span>
-            </span>
-          </a>
+        <!-- Ziad's Real Photo Frame -->
+        <div class="hero-photo-container">
+          <div class="hero-photo-frame">
+            <img src="assets/ziad_profile.jpg" alt="Ziad Omar - Full Stack Engineer" class="hero-photo-img" />
+            <div class="hero-photo-tag">
+              <span class="hero-photo-name">ZIAD OMAR</span>
+              <span class="hero-photo-title">Cairo, Egypt ✦ Dev</span>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
 
     <!-- Tech Marquee Ticker -->
@@ -137,16 +145,16 @@
         <span>ANGULAR 18</span>
         <span>NODE.JS</span>
         <span>EXPRESS.JS</span>
-        <span>MONGODB & MONGOOSE</span>
+        <span>MONGODB</span>
+        <span>REST APIS</span>
         <span>TYPESCRIPT</span>
-        <span>RESTFUL APIS</span>
-        <span>EDITORIAL UI/UX</span>
+        <span>SWISS UI/UX</span>
         <span>REACT 19</span>
         <span>ANGULAR 18</span>
         <span>NODE.JS</span>
         <span>EXPRESS.JS</span>
-        <span>MONGODB & MONGOOSE</span>
-        <span>TYPESCRIPT</span>
+        <span>MONGODB</span>
+        <span>REST APIS</span>
       </div>
     </div>
   </section>
@@ -159,16 +167,16 @@
       <div class="works-header">
         <div>
           <div class="section-label">02 // PORTFOLIO ARCHIVE</div>
-          <h2 class="display-title">SELECTED<br /><span style="font-weight: 300; font-style: italic; color: var(--c-text-muted);">WORKS</span></h2>
+          <h2 class="display-title">SELECTED <strong>WORKS</strong></h2>
         </div>
-        <p style="color: var(--c-text-muted); max-width: 380px; font-size: 0.95rem;">
-          A curated collection of production-ready applications, full-stack systems, and reactive interfaces built with cutting-edge web technologies.
+        <p style="color: var(--c-text-muted); max-width: 360px; font-size: 0.92rem; font-weight: 300;">
+          A curated collection of production-ready applications, full-stack systems, and reactive web interfaces.
         </p>
       </div>
 
       <div class="works-grid">
 
-        <!-- Project 1: AURUM E-Commerce (React) -->
+        <!-- Project 1: AURUM E-Commerce -->
         <article class="project-card-editorial">
           <div class="project-media-wrap">
             <img src="assets/ecommerce_mockup.jpg" alt="Aurum E-Commerce Platform" class="project-cover-img" />
@@ -227,7 +235,7 @@
                   <span class="text-hover">GitHub Repo ↗</span>
                 </span>
               </a>
-              <button class="btn-editorial" onclick="openInboxModal()" style="background: rgba(0, 210, 255, 0.08); border-color: rgba(0, 210, 255, 0.25);">
+              <button class="btn-editorial" onclick="openInboxModal()" style="background: rgba(255, 255, 255, 0.05);">
                 <span class="btn-text-wrap">
                   <span class="text-main">View Live Inbox 📬</span>
                   <span class="text-hover">View Live Inbox 📬</span>
@@ -254,7 +262,7 @@
             <div class="project-tags-list">
               <span class="project-tag">JavaScript ES6+</span>
               <span class="project-tag">LocalStorage API</span>
-              <span class="project-tag">CSS Grid & Flexbox</span>
+              <span class="project-tag">CSS Grid</span>
             </div>
             <div class="project-actions">
               <a href="https://github.com/zezobnomar55-sudo/gym-store" target="_blank" rel="noreferrer" class="btn-editorial">
@@ -277,7 +285,7 @@
   <section class="services-section" id="services">
     <div class="container">
       <div class="section-label">03 // ENGINEERING CAPABILITIES</div>
-      <h2 class="display-title">CORE<br /><span style="font-weight: 300; font-style: italic; color: var(--c-text-muted);">CAPABILITIES</span></h2>
+      <h2 class="display-title">CORE <strong>CAPABILITIES</strong></h2>
 
       <div class="services-grid">
         <div class="service-card">
@@ -313,27 +321,27 @@
   <section class="services-section" id="about">
     <div class="container">
       <div class="section-label">04 // DEVELOPER PROFILE</div>
-      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start;">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start;">
         <div>
-          <h2 class="display-title" style="font-size: clamp(2.4rem, 4.5vw, 4.2rem);">ZIAD<br /><span style="font-weight: 300; font-style: italic; color: var(--c-text-muted);">OMAR</span></h2>
-          <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--c-text-muted); margin-top: 16px;">
+          <h2 class="display-title" style="font-size: clamp(2.2rem, 4vw, 3.8rem);">ZIAD <strong>OMAR</strong></h2>
+          <p style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--c-text-muted); margin-top: 14px;">
             Full-Stack Web Developer & MEAN Stack Specialist based in Cairo, Egypt.
           </p>
         </div>
 
         <div>
-          <p style="font-size: 1.05rem; color: var(--c-text-muted); line-height: 1.7; margin-bottom: 24px;">
+          <p style="font-size: 1rem; color: var(--c-text-muted); line-height: 1.7; margin-bottom: 22px; font-weight: 300;">
             I believe that great software is the intersection of <strong>clean engineering</strong> and <strong>flawless user experience</strong>. Whether architecting database schemas in MongoDB or fine-tuning CSS animations, every line of code is written with precision and longevity in mind.
           </p>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid var(--c-obsidian-border); padding-top: 24px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid var(--c-obsidian-border); padding-top: 22px;">
             <div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-text-subtle); text-transform: uppercase;">Primary Stack</span>
-              <p style="font-weight: 600; font-size: 0.95rem; margin-top: 4px;">Node.js • Express • Angular • React • MongoDB</p>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--c-text-subtle); text-transform: uppercase;">Primary Stack</span>
+              <p style="font-weight: 500; font-size: 0.92rem; margin-top: 4px;">Node.js • Express • Angular • React • MongoDB</p>
             </div>
             <div>
-              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--c-text-subtle); text-transform: uppercase;">Availability</span>
-              <p style="font-weight: 600; font-size: 0.95rem; margin-top: 4px; color: var(--c-accent-green);">Open for Full-Time & Contracts</p>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--c-text-subtle); text-transform: uppercase;">Availability</span>
+              <p style="font-weight: 500; font-size: 0.92rem; margin-top: 4px; color: var(--c-accent-green);">Open for Full-Time & Contracts</p>
             </div>
           </div>
         </div>
@@ -342,7 +350,7 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 05: CONTACT (INTEGRATED WITH MONGODB BACKEND)
+       SECTION 05: CONTACT
        ========================================================================== -->
   <section class="contact-section" id="contact">
     <div class="container">
@@ -350,15 +358,15 @@
         <div class="contact-info-col">
           <div>
             <div class="section-label">05 // INITIATE CONTACT</div>
-            <h2 class="contact-big-title">LET'S BUILD<br /><span style="font-weight: 300; font-style: italic; color: var(--c-text-muted);">SOMETHING</span><br />EXTRAORDINARY.</h2>
+            <h2 class="contact-big-title">LET'S BUILD<br /><strong>SOMETHING</strong><br />EXTRAORDINARY.</h2>
           </div>
 
           <div class="contact-methods">
             <a href="mailto:zezobnomar55@gmail.com" class="contact-link-item">
-              <span style="color: var(--c-accent-cyan);">✦</span> zezobnomar55@gmail.com
+              <span style="color: var(--c-soft-concrete); opacity: 0.5;">✦</span> zezobnomar55@gmail.com
             </a>
             <a href="https://github.com/zezobnomar55-sudo" target="_blank" rel="noreferrer" class="contact-link-item">
-              <span style="color: var(--c-accent-cyan);">✦</span> github.com/zezobnomar55-sudo
+              <span style="color: var(--c-soft-concrete); opacity: 0.5;">✦</span> github.com/zezobnomar55-sudo
             </a>
           </div>
         </div>
@@ -379,7 +387,7 @@
             <textarea id="senderMessage" class="form-textarea-editorial" placeholder="Tell me about your project, timeline, or inquiries..." required></textarea>
           </div>
 
-          <button type="submit" class="btn-editorial" style="width: 100%; justify-content: center; padding: 16px 28px; background: var(--c-soft-concrete); color: #08080a;">
+          <button type="submit" class="btn-editorial" style="width: 100%; justify-content: center; padding: 15px 26px; background: var(--c-soft-concrete); color: #0b0b0b;">
             <span class="btn-text-wrap">
               <span class="text-main" id="submitBtnMainText">Transmit Message ↗</span>
               <span class="text-hover" id="submitBtnHoverText">Transmit Message ↗</span>
@@ -391,7 +399,7 @@
   </section>
 
   <!-- ==========================================================================
-       NABIL ISSA SIGNATURE: BOTTOM STICKY CHAPTER NAVIGATION BAR
+       BOTTOM CHAPTER NAVIGATION BAR
        ========================================================================== -->
   <nav class="chapter-nav-bar">
     <div class="container chapter-nav-inner">

@@ -16,6 +16,8 @@ const errorHandler = require("./middleware/errorHandler");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+console.log("🚀 Starting Full-Stack Portfolio Server...");
+
 // Core Middlewares
 app.use(cors());
 app.use(express.json());
@@ -33,7 +35,7 @@ app.use("/api/auth", authRoutes);
 app.get("/api/health", (req, res) => {
   res.json({
     status: "OK",
-    message: "Full-Stack Portfolio API Server is running",
+    message: "Full-Stack Portfolio API Server is running 🚀",
     modules: [
       "/api/messages",
       "/api/posts",
@@ -51,14 +53,15 @@ app.use(errorHandler);
 // Database Connection & Server Listener
 const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/portfolio_db";
 
-mongoose
-  .connect(mongoUri)
-  .then(() => {
-    console.log("Connected to MongoDB successfully");
-    app.listen(PORT, () => {
-      console.log(`Server listening on http://localhost:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`🚀 Server listening on http://localhost:${PORT}`);
+  
+  mongoose
+    .connect(mongoUri)
+    .then(() => {
+      console.log("✅ Connected to MongoDB successfully");
+    })
+    .catch((err) => {
+      console.error("❌ MongoDB Connection Error:", err.message);
     });
-  })
-  .catch((err) => {
-    console.error("MongoDB Connection Error:", err.message);
-  });
+});

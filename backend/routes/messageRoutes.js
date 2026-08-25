@@ -1,31 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const Message = require("../models/Message");
+const {
+  getMessages,
+  createMessage,
+  markMessageRead,
+  deleteMessage,
+} = require("../controllers/messageController");
+const { protect } = require("../middleware/authMiddleware");
 
-// POST /api/messages -> حفظ رسالة جديدة (لما حد يبعت من الـ Contact form)
-router.post("/", async (req, res) => {
-  try {
-    const { name, email, message } = req.body;
+router.route("/")
+  .get(getMessages)
+  .post(createMessage);
 
-    if (!name || !email || !message) {
-      return res.status(400).json({ error: "كل الحقول مطلوبة" });
-    }
-
-    const newMessage = await Message.create({ name, email, message });
-    res.status(201).json(newMessage);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-// GET /api/messages -> عرض كل الرسايل (تستخدمها انت بس عشان تشوفهم)
-router.get("/", async (req, res) => {
-  try {
-    const messages = await Message.find().sort({ createdAt: -1 });
-    res.json(messages);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+router.put("/:id/read", protect, markMessageRead);
+router.delete("/:id", protect, deleteMessage);
 
 module.exports = router;

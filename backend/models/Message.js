@@ -1,21 +1,25 @@
 const mongoose = require("mongoose");
 
-// نفس فكرة الـ Student Schema بتاعك، بس هنا بيانات الرسالة
 const messageSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
+    required: [true, "Name is required"],
     trim: true,
   },
   email: {
     type: String,
-    required: true,
+    required: [true, "Email is required"],
     trim: true,
+    lowercase: true,
   },
   message: {
     type: String,
-    required: true,
+    required: [true, "Message content is required"],
     trim: true,
+  },
+  read: {
+    type: Boolean,
+    default: false,
   },
   createdAt: {
     type: Date,
